@@ -1,0 +1,85 @@
+﻿<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.bb</groupId>
+    <artifactId>kafka-0.8</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <dependencies>
+    
+    <dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+		<version>1.7.21</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-log4j12</artifactId>
+		<version>1.7.21</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.apache.kafka</groupId>
+		<artifactId>kafka_2.10</artifactId>
+		<version>0.8.1</version>
+		<exclusions>
+			<exclusion>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+			</exclusion>
+			<exclusion>
+				<artifactId>slf4j-simple</artifactId>
+				<groupId>org.slf4j</groupId>
+			</exclusion>
+			<exclusion>
+				<artifactId>slf4j-log4j12</artifactId>
+				<groupId>org.slf4j</groupId>
+			</exclusion>
+		</exclusions>
+	</dependency>
+        
+        <!-- Test libs -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>			
+			<scope>test</scope>
+		</dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.5.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                    <encoding>utf8</encoding>
+                </configuration>
+            </plugin>
+
+            <!--   要将源码放上去，需要加入这个插件    -->
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>
