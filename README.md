@@ -3,7 +3,7 @@ kafka producer and cosumer, easy to integrate with spring
 
 based on kafa 0.8.1
 
-1. producer<br>
+# producer
 - configuration
 ```xml
 	<bean id="producerProperties"
@@ -21,7 +21,7 @@ based on kafa 0.8.1
 ```
 <br>
 
-2. consumer(at most once)<br>
+# consumer(at most once)
 - configuration
 
 ```xml
