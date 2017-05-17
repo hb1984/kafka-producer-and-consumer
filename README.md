@@ -21,7 +21,7 @@ based on kafa 0.8.1
 ```
 
 2. consumer(at most once)
-1.configuration
+	1.configuration
 
 ```xml
     <bean id="consumerProperties"
