@@ -19,8 +19,7 @@ based on kafa 0.8.1
 		<property name="properties" ref="producerProperties"></property>
 	</bean>
 ```
-
-
+<br>
 
 2. consumer(at most once)<br>
 	1.configuration
