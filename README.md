@@ -4,7 +4,7 @@ kafka producer and cosumer, easy to integrate with spring
 based on kafa 0.8.1
 
 1. producer<br>
-	1.configuration
+- configuration
 ```xml
 	<bean id="producerProperties"
 		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
@@ -22,7 +22,7 @@ based on kafa 0.8.1
 <br>
 
 2. consumer(at most once)<br>
-	1.configuration
+- configuration
 
 ```xml
 	<bean id="consumerProperties"
